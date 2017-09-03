@@ -1,0 +1,48 @@
+{ "orders": [
+    {
+        "OrderNum": 0,
+        "CustomerNum": 0,
+        "FirstName": "Jason",
+        "LastName": "Williams",
+        "Email": "Williams.J@sample.com",
+        "CarNum": 0,
+        "Make": "BMW",
+        "Model": "X1",
+        "BodyStye": "SUV",
+        "Year": "2015",
+        "Color": "black",
+        "Price": 35000,
+        "CarPicture": "http://media.caranddriver.com/images/09q3/267589/2011-bmw-x1-review-car-and-driver-photo-290114-s-429x262.jpg"
+    },
+    {
+        "OrderNum": 1,
+        "CustomerNum": 1,
+        "FirstName": "Kevin",
+        "LastName": "Durant",
+        "Email": "Kevin.D@sample.net",
+        "CarNum": 1,
+        "Make": "Honda",
+        "Model": "Civic",
+        "BodyStye": "Sedan",
+        "Year": "2015",
+        "Color": "white",
+        "Price": 20000,
+        "CarPicture": "http://automobiles.honda.com/images/2015/civic-si-sedan/configurations/base-cars/TW_si_34FRONT.png"
+    },
+    {
+        "OrderNum": 2,
+        "CustomerNum": 2,
+        "FirstName": "Kobe",
+        "LastName": "Bryant",
+        "Email": "kobebryant@sample.org",
+        "CarNum": 2,
+        "Make": "Audi",
+        "Model": "Q5",
+        "BodyStye": "SUV",
+        "Year": "2015",
+        "Color": "red",
+        "Price": 45000,
+        "CarPicture": "http://www.suvchronicles.com/wp-content/uploads/2015/09/Audi-Q5-2016-Front.jpeg"
+    }
+]
+}

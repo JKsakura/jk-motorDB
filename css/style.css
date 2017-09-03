@@ -1,0 +1,543 @@
+body {
+    margin:0px;
+    padding:0px;
+    padding-top:60px;
+    padding-bottom:50px;
+    background: #e6fff3;
+}
+
+a,input,button{
+    outline:none;
+}
+
+::-moz-focus-inner{
+    border:0px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 60px;
+    background: #2a2a2a;
+    border-bottom: solid 5px #05f2ce;
+}
+
+logo h1 {
+    margin-top: 15px;
+    position: absolute;
+    margin-left: 3px;
+}
+
+logo {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 170px;
+    height: 60px;
+    text-align: center;
+    float: left;
+    background: #05f2ce;
+}
+
+logo a {
+    color: #2a2a2a;
+}
+
+logo a:hover {
+    color: #ffffff;
+    text-shadow: 1px 1px #000;
+    transition: all 0.3s;
+}
+
+nav {
+    padding: 0;
+    width: 60%;
+    float: left;
+}
+
+.refreshBtn {
+    position: absolute;
+    top: 15px;
+    left: 230px;
+    padding: 0 10px 0 10px;
+    height: 32px;
+    background: #05f2ce;
+    border-radius: 5px;
+    border: none;
+    color: #1f1f1f;
+    font-size: 13px;
+    text-shadow: 1px;
+}
+
+.refreshBtn:hover {
+    background: #00d0b0;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.clearStorageBtn {
+    position: absolute;
+    top: 15px;
+    left: 370px;
+    padding: 0 10px 0 10px;
+    height: 32px;
+    background: #05f2ce;
+    border-radius: 5px;
+    border: none;
+    color: #1f1f1f;
+    font-size: 13px;
+    text-shadow: 1px;
+}
+
+.clearStorageBtn:hover {
+    background: #00d0b0;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+/* ---------- Set up the style to hold the radio button ---------- */
+.radioContainer {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.radioLabel {
+    margin-left: 50px;
+}
+
+/* Search form */
+
+.searchBar {
+    color:#fff;
+    position: absolute;
+    top: 20px;
+    right: 10%;
+}
+
+/* Search form */
+.searchform {
+    position: relative;
+    top: -5px;
+    right: -20%;
+    width: 400px;
+    padding: 0;
+}
+
+.searchFlip {
+    float: left;
+    margin-left: -2px;
+    padding-right: 20px;
+    width: 140px;
+    height: 32px;
+    background: #50ffe4;
+    border-radius: 5px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border: 1px solid #2a2a2a;
+    border-left: none;
+    color: #2a2a2a;
+    font-size: 13px;
+    text-shadow: 1px;
+}
+
+.searchFlip:hover {
+    background: #00d0b0;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.searchArrow {
+    position: absolute;
+    left: 118px;
+    top:8px;
+    width: 20px;
+    height: 20px;
+}
+
+.searchPanel {
+    float: left;
+    margin-top: 32px;
+    margin-right: -160px;
+    padding: 0;
+    background: #fff;
+    display: none;
+    z-index: 1;
+    border: solid 2px #05f2ce;
+    border-radius: 5px;
+    border-top: none;
+}
+
+.searchPanel ul{
+    padding: 5px;
+    margin: 0;
+    list-style: none;
+    background: #fff;
+    text-align: center;
+}
+
+.searchPanel ul li {
+    margin-top: 5px;
+    text-align: left;
+    color: #000;
+}
+
+.searchform .searchfield {
+    float: left;
+    margin: 0;
+    margin-left: -1px;
+    height: 32px;
+	font-family: 'AmbleRegular';
+	font-size: 0.924em;
+	font-weight: normal;
+	line-height: 1.8em;
+	padding: 2px 2px;
+	width: 150px;
+	border: 1px solid #2a2a2a;
+    border-left: none;
+    z-index: 1;
+    -webkit-appearance: none;
+}
+
+.searchfield:focus {
+	width: 200px;
+    transition:all 0.7s;
+	color: #555;
+}
+
+.searchfield:not(:focus) {
+	width: 150px;
+    transition:all 0.7s;
+}
+
+.searchBtn {
+    float: left;
+    margin-left: -2px;
+    padding: 0;
+    width: 50px;
+    height: 32px;
+    background: #05f2ce;
+    border-radius: 5px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border: 1px solid #2a2a2a;
+    border-left: none;
+    color: #1f1f1f;
+    font-size: 13px;
+    text-shadow: 1px;
+}
+
+.searchBtn:hover {
+    background: #00d0b0;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.clearBtn {
+    position: absolute;
+    top: 60px;
+    right: 65px;
+    padding: 0;
+    width: 60px;
+    height: 32px;
+    background: #05f2ce;
+    border-radius: 5px;
+    border: none;
+    color: #1f1f1f;
+    font-size: 13px;
+    text-shadow: 1px;
+    display: none;
+}
+
+.clearBtn:hover {
+    background: #00d0b0;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.resultBox {
+    position: absolute;
+    top: 55px;
+    left: 20px;
+    width: 250px;
+    height: 35px;
+    padding-top: 12px;
+    color: #1f1f1f;
+    font-size: 20px;
+    text-shadow: 1px;
+    z-index: 0;
+}
+
+.container {
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    text-align: center;
+    width: 95vw;
+}
+
+table tr th {
+    margin-left: 5px;
+    cursor: default;
+}
+
+table tr td {
+    width: 8vw;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+}
+
+.titleRow th{
+    background: #05f2ce;
+    font-size: 20px;
+    color: #2a2a2a;
+}
+
+.insertRow td {
+    height: 20px;
+}
+
+.highLight {
+    background: #fff365;
+}
+
+.highlight {
+    background: yellow;
+}
+
+table input {
+    width: 100px;
+    margin-left: 5px;
+}
+
+.topTitle td{
+    background: #05f2ce;
+}
+
+.footTitle td {
+    margin: 0;
+    padding-top: 10px;
+    border-top: solid 1px #000;
+}
+
+.deleteBtn {
+    width: 70px;
+    height: 22px;
+    font-size: 15px;
+    background: #ff4d4d;
+    border-radius: 5px;
+    border: none;
+    color: #1f1f1f;
+}
+
+.deleteBtn:hover {
+    background: #d82a2a;
+    cursor: pointer;
+}
+
+.addBtn {
+    width: 70px;
+    height: 22px;
+    font-size: 15px;
+    background: #5fff59;
+    border-radius: 5px;
+    border: none;
+    color: #1f1f1f;
+}
+
+.addBtn:hover {
+    background: #35bf30;
+    cursor: pointer;
+}
+
+.colorPicker {
+    width:10px; 
+    height:10px; 
+    background: #000;
+}
+.colorBox {
+    width:25px; 
+    height:25px; 
+    border: solid 1px #000;
+    margin: auto;
+}
+
+.carPicture {
+    margin: auto;
+    margin-top: 5px;
+}
+
+.editActive {
+    background: #e6fff3;
+    transition: all 0.3s;
+}
+
+/* ---------- set the style of the changing password button ---------- */
+.checkBox {
+    position: absolute;
+	background-color: #fff;
+	width:610px;
+    left: 50%;
+    top: 200px;;
+    margin-left: -305px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    border: solid 2px #2a2a2a;
+    border-radius: 10px;
+    text-align: center;
+    display: none;
+}
+
+.checkBox h2 {
+    color:#1962ff;
+}
+
+.checkButton {
+	width:150px;
+	height:60px;
+    margin-top: 30px;
+	text-align:center;
+	color:#FFF;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+	transition: all 0.3s;
+    background: #2bec4f;
+}
+
+.checkButton:hover {
+    background: #14a32e;
+    cursor: pointer;
+}
+
+.noCheckButton {
+	width:150px;
+	height:60px;
+    margin-top: 30px;
+    margin-left: 20px;
+	text-align:center;
+	color:#FFF;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+	transition: all 0.3s;
+    background: #f22626;
+}
+
+.noCheckButton:hover {
+    margin-left: 20px;
+    background: #b60f0f;
+    cursor: pointer;
+}
+
+
+/* ---------- Footer Start ---------- */
+footer {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+	background:#2a2a2a;
+    bottom: 0;
+    border-top: solid 5px #05f2ce;
+}
+
+.footer-bottom .copyright {
+    margin: auto;
+    width: 145px;
+}
+
+.footer-bottom .copyright p {
+	font-size:16px;
+	color:#989898;
+}
+
+.footer-bottom .copyright p span {
+	font-family: 'TitilliumMaps26L-999wt';
+	color:#ffffff;
+	background:#00a1e8;
+	padding:0 5px;
+	display:inline-block;
+}
+
+
+/* ---------- Index Page ---------- */
+.index_container {
+}
+
+.index_container h1 {
+    position: absolute;
+    float: left;
+    top: 100px;
+    text-align: center;
+    font-size: 38px;
+    width: 44%;
+    height:auto;
+    color: #fff;
+    display: none;
+    text-shadow: 1;
+}
+
+.index_container h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #2a2a2a;
+}
+
+.index_container p {
+    text-align: center;
+    color: #2a2a2a;
+    padding: 30px;
+    padding-top: 15px;
+    font-size: 28px;
+}
+
+.index_database {
+    position: relative;
+    float: left;
+    margin-top: 200px;
+    width: 100%;
+}
+
+#first_database {
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    left: 23vw;
+    background: #fff;
+    border-radius: 10px;
+    display: none;
+}
+
+#first_database a{
+    text-decoration: none;
+}
+
+#first_database:hover {
+    background: #5db5ff;
+    transition: all 0.5s;
+}
+
+#second_database {
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    right: 23vw;
+    background: #fff;
+    border-radius: 10px;
+    display: none;
+}
+
+#second_database a{
+    text-decoration: none;
+}
+
+#second_database:hover {
+    background: #ff8e8e;
+    transition: all 0.5s;
+}

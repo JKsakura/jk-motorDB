@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>One Localstorage Database</title>
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+</head>
+<body>
+    <!-- Header Start -->
+    <header>
+        <nav>
+            <logo><a href="../index.html"><h1>Amazing Motor</h1></a></logo>
+            <input type="button" value="Refresh Page" id="refreshBtn" class="refreshBtn" onclick="resetPage()">
+            <input type="button" value="Clear Storage" id="clearStorageBtn" class="clearStorageBtn" onclick="clearStorage()">
+        </nav>
+        <!-- SearchBar Start -->
+        <div class="searchBar" id="searchBar">
+            <form class="searchform" action="#"> 
+            <div class="searchPanel" id="searchPanel">
+                <ul class="searchArea">
+                    <li class="searchArea"><input type="radio" name="searchRadio" value="Search ALL Fields" checked="checked"><label class="searchArea">Search ALL Fields</label></li>
+                    <li class="searchArea"><input type="radio" name="searchRadio" value="First Name"><label class="searchArea">First Name</label></li>
+                    <li class="searchArea"><input type="radio" name="searchRadio" value="Last Name"><label class="searchArea">Last Name</label></li>
+                    <li class="searchArea"><input type="radio" name="searchRadio" value="Email"><label class="searchArea">Email</label></li>
+                    <li class="searchArea"><input type="radio" name="searchRadio" value="Make"><label class="searchArea">Make</label></li>
+                    <li class="searchArea"><input type="radio" name="searchRadio" value="Model"><label class="searchArea">Model</label></li>
+                    <li class="searchArea"><input type="radio" name="searchRadio" value="Body Style"><label class="searchArea">Body Style</label></li>
+                    <li class="searchArea"><input type="radio" name="searchRadio" value="Year"><label class="searchArea">Year</label></li>
+                    <li class="searchArea"><input type="radio" name="searchRadio" value="Color"><label class="searchArea">Color</label></li>
+                    <li class="searchArea"><input type="radio" name="searchRadio" value="Price"><label class="searchArea">Price</label></li>
+                    <li class="searchArea"><input type="radio" name="searchRadio" value="Car Picture"><label class="searchArea">Car Picture</label></li>
+                </ul>
+            </div>
+            <input type="button" class="searchFlip" id="searchFlip">
+            <div class="searchArrow" id="downArrow"><img src="http://jksakura.com/html5exercise/downarrow.png" width="15" height="10"></div>
+            <div class="searchArrow" id="upArrow"><img src="http://jksakura.com/html5exercise/uparrow.png" width="15" height="10"></div>
+            <input type="search" id="searchField" value="Search" onfocus="searchFocus()" onblur="searchBlur()" class="searchfield"  required onkeypress="searchEnter(event)">        
+            <input type="button" value="GO" id="searchBtn" class="searchBtn">
+            <div class="resultBox" id="resultBox"></div>
+            <input type="button" value="CLEAR" id="clearBtn" class="clearBtn">
+		    </form>
+        </div>
+        <!--
+        <div class="searchBar">
+            <label>Search</label>
+            <input type="search" id="searchField" value="Search" onfocus="searchFocus()" onblur="searchBlur()">
+            <input type="button" value="GO" id="searchBtn">
+        </div>
+        -->
+        <!-- SearchBar End -->
+    </header>
+    <!-- Header End -->
+    <!-- Container Start -->
+    <div class="container">
+        <h2>Amazing Motor Order List</h2>
+        <!-- The radio input box -->
+        <div class="radioContainer" id="radioContainer">
+            <label>VIEW</label>
+            <input type="radio" name="radioBox" id="view" checked="checked" onclick="checkRadio()">
+            <label class="radioLabel">EDIT</label>
+            <input type="radio" name="radioBox" id="edit" onclick="checkRadio()">
+        </div>
+        <!-- Create the table -->
+        <table class="orderTable" id="orderTable">
+            <form class="orderForm" id="orderForm">
+            <!-- The first Title row of the table -->
+            <thead class="topTitle">
+                <tr class="titleRow">
+                    <th><b>First Name</b></th>
+                    <th><b>Last Name</b></th>
+                    <th><b>Email</b></th>
+                    <th><b>Make</b></th>
+                    <th><b>Model</b></th>
+                    <th><b>Body Style</b></th>
+                    <th><b>Year</b></th>
+                    <th><b>Color</b></th>
+                    <th><b>Price</b></th>
+                    <th><b>Car Pictures</b></th>
+                </tr>
+            </thead>
+            <!-- The insert Row of the table -->
+            <tbody>
+                <tr id="insertRow" class="insertRow">
+                    <td><input type="text" name="first" required autofocus></td>
+                    <td><input type="text" name="last" required></td>
+                    <td><input type="email" name="email"></td>
+                    <td><input type="text" name="make" required></td>
+                    <td><input type="text" name="model" required></td>
+                    <td>
+                        <select name="style" required>
+                            <option value="Sedan">Sedan</option>
+                            <option value="Convertible">Convertible</option>
+                            <option value="SUV">SUV</option>
+                            <option value="Wagon">Wagon</option>
+                            <option value="Van">Van</option>
+                            <option value="Coupe">Coupe</option>
+                            <option value="Pickup">Pickup</option>
+                        </select>
+                    </td>
+                    <td><input type="number" min="0" name="year"></td>
+                    <td>
+                        <select type="text" name="color" required>
+                            <option value="black">Black</option>
+                            <option value="white">White</option>
+                            <option value="gray">Gray</option>
+                            <option value="gold">Gold</option>
+                            <option value="silver">Silver</option>
+                            <option value="blue">Blue</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="green">Green</option>
+                            <option value="orange">Orange</option>
+                            <option value="purple">Purple</option>
+                            <option value="pink">Pink</option>
+                            <option value="brown">Brown</option>
+                        </select>
+                    </td>
+                    <td><input type="number" min="0" name="price" required></td>
+                    <td><input type="url" name="picture"></td>
+                    <td><input type="submit" value="ADD" class="addBtn"></td>
+                </tr>
+            </tbody>
+            </form>
+        </table>
+        <!-- A div to hold the Change password button -->
+        <div class="checkBox" id="checkBox">
+            <h2>Are you sure you want to clear the localStorage?</h3>
+            <input type="button" value="Yes" class="checkButton" id="checkButton">
+            <input type="button" value="No" class="noCheckButton" id="noCheckButton">
+        </div>
+    </div>
+    <!-- Container End -->  
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/underscore-min.js"></script>
+<script src="js/script_localstorage.js"></script>
+</html>
